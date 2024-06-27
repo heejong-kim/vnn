@@ -131,7 +131,7 @@ def main(args):
     testDataLoader = torch.utils.data.DataLoader(TEST_DATASET, batch_size=args.batch_size, shuffle=False, num_workers=4)
 
     '''MODEL LOADING'''
-    num_class = 40
+    num_class = 1
     MODEL = importlib.import_module(args.model)
 
     classifier = MODEL.get_model(args, num_class, normal_channel=args.normal).cuda()
